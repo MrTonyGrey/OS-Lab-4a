@@ -9,7 +9,7 @@
 #define DEBUG 0			//change this to 1 to enable verbose output
 
 /**
- * Signature for an function pointer that can compare
+ * Signature for a function pointer that can compare
  * You need to cast the input into its actual 
  * type and then compare them according to your
  * custom logic
@@ -25,6 +25,15 @@ typedef int (*Comparer) (const void *a, const void *b);
 int my_comparer(const void *this, const void *that)
 {
 	//TODO: IMPLEMENT ME!
+	Process *a = (Process *) this;
+  Process *b = (Process *) that;
+  
+  if(a->arrival_time < b->arrival_time){
+    return a->arrival_time;
+  }
+  if (a->priority < b->priority){
+    return a->priority;
+  }
 	return 0;
 }
 
