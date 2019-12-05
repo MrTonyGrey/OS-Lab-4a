@@ -18,5 +18,5 @@ typedef struct _process {
  * constructed with the pid, arrival time and priority
  */
 void process_ctr(Process * p, int pid, int arrival_time, int priority);
-
+ 
 #endif				// PROCESS_H
